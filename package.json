@@ -2,7 +2,7 @@
   "name": "htmlviewer",
   "widgetName": "HtmlViewer",
   "version": "1.0.0",
-  "description": "My widget description",
+  "description": "A Mendix pluggable widget to display view html content.",
   "copyright": "© Mendix Technology BV 2022. All rights reserved.",
   "author": "Jonathan Zhu",
   "engines": {

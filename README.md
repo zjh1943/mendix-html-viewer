@@ -1,5 +1,5 @@
 ## HtmlViewer
-[My widget description]
+A Mendix pluggable widget to display view html content.
 
 ## Features
 [feature highlights]
