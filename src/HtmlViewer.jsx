@@ -8,11 +8,11 @@ export class HtmlViewer extends Component {
         let htmlString = "";
 
         if (htmlSourceType === "attribute") {
-            if (htmlAttribute.status === "available") {
+            if (htmlAttribute && htmlAttribute.status === "available") {
                 htmlString = htmlAttribute.value;
             }
         } else {
-            if (htmlTextTemplate.status === "available") {
+            if (htmlTextTemplate && htmlTextTemplate.status === "available") {
                 htmlString = htmlTextTemplate.value;
             }
         }
