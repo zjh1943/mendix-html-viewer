@@ -40,19 +40,10 @@ jobs:
                   NODE_OPTIONS: --max_old_space_size=4096
             - name: npm run release
               run: |
-                  git clone https://github.com/engalar/mendix-testproject-960.git --depth=1 ./tests/testProject
-                  rm -rf tests/testProject/.git
-                  cp -r dummy/* tests/testProject/
                   npm run release
-                  cp -r dist/${{ steps.package.outputs.version }}/* tests/testProject/widgets/
               env:
                   NODE_OPTIONS: --max_old_space_size=4096
-            - name: "Zip testProject"
-              run: |
-                  pushd tests/testProject/
-                  zip -r ../../dist/demo.zip *
-                  popd
-            - name: "Release MPK Files"
+            - name: "package MPK files"
               uses: marvinpinto/action-automatic-releases@v1.2.1
               with:
                   repo_token: "${{ secrets.GITHUB_TOKEN }}"
@@ -61,4 +52,3 @@ jobs:
                   title: "${{ steps.package.outputs.widgetName }}"
                   files: |
                       dist/**/*.mpk
-                      dist/demo.zip
