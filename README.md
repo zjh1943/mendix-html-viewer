@@ -2,13 +2,16 @@
 A Mendix pluggable widget to display view html content.
 
 ## Features
-[feature highlights]
+
+1. Dispay html content in Mendix.
+2. Use dynamic string as the html string to be shown. Support both Attribute of Entity and Text Template.
 
 ## Usage
-[step by step instructions]
-
-## Demo project
-[link to sandbox]
+1. Add this pluggable widget into your Mendix Project.
+    1. Download the latest mpk file from [here](https://github.com/zjh1943/mendix-html-viewer/releases).
+    3. Copy the mpk file to `{YourMendixProjectFolder}/widgets/`.
+    4. Open your mendix project with the Mendix Studio Pro, click `Menu > App > Synchronize App Directory`.
+2. Add `Html Viewer` widget into the page.
 
 ## Issues, suggestions and feature requests
 [link to GitHub issues]
