@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="mendix.htmlviewer.HtmlViewer" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+    supportedPlatform="Web"
+    xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Html Viewer</name>
+    <description>My widget description</description>
+    <icon />
+    <properties>
+        <propertyGroup caption="General">
+            <property key="htmlSourceType" type="enumeration" defaultValue="attribute" required="true">
+                <caption>Html source type</caption>
+                <description>Choose source of html string. Either from an attribute of an entity or from a text template</description>
+                <enumerationValues>
+                    <enumerationValue key="attribute">Attribute</enumerationValue>
+                    <enumerationValue key="textTemplate">Text Template</enumerationValue>
+                </enumerationValues>
+            </property>
+            <property key="htmlAttribute" type="attribute" required="false">
+                <caption>Html Attribute</caption>
+                <description>Select from an Atrribute of an Entity</description>
+                <attributeTypes>
+                    <attributeType name="String" />
+                </attributeTypes>
+            </property>
+            <property key="htmlTextTemplate" type="textTemplate" required="false">
+                <caption>Html Text Template </caption>
+                <description>Create an html string from a text template.</description>
+            </property>
+            <systemProperty key="Label" />
+            <systemProperty key="Visibility"/>
+            <systemProperty key="TabIndex"/>
+        </propertyGroup>
+    </properties>
+</widget>
